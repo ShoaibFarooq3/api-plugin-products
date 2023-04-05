@@ -27,6 +27,8 @@ export default async function products(_, args, context, info) {
     metafieldValue,
     priceMin,
     priceMax,
+    size,
+    color,
     ...connectionArgs
   } = args;
 
@@ -45,7 +47,9 @@ export default async function products(_, args, context, info) {
     metafieldKey,
     metafieldValue,
     priceMin,
-    priceMax
+    priceMax,
+    size,
+    color
   });
 
   return getPaginatedResponse(query, connectionArgs, {
